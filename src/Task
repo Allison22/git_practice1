@@ -82,4 +82,24 @@
             1. Your local timeline is called: Local 'master' branch
             2. Your remote timeline is called: 'Origin/master' branch
 
-        ##Ignoring Files or folders that...
+        ## Ignoring Files or folders that we do not want to keep track of
+        Git uses a very special file called .gitignore to exclude files and folders from being tracked and avoid it to be even staged.
+        .gitignore file itself is like a blacklist and will be tracked like other files in your project.
+        Git will ignore list of files and folders name that provided
+        inside .gitignore file
+
+        1. Create a file called '.gitignore' directly under project location
+        2. add below 3 lines, first 2 for 2 text file and 3rd one for folder
+        ''' file1.txt
+            file2.txt
+            power
+            '''
+        3. Now try to create file1.txt, file2.txt and observe git will completely ignore and you will
+        not see it under change tab
+        4. Create a folder called 'power'
+        5. Add 2 mor efile 'file3.txt', 'file4.txt' and observe git completely ignore this.
+        6. SideBar : .gitIgnore will only work for the files or folder that not already tracked, anything that added after it's been already tracked will not be ignored. That's also the reason .gitignore is the first thing should be created in the project and lots of project already have knownn file or folders to be ignored.
+        7. In IntelliJ regular java project we will always ignore 2 folders and one file
+           1. .idea : IntelliJ related settings
+           2. out   : this is where bytecodes stored from the src code and we do not keep track of them
+           3. yourProjectName.iml Intellij thing
